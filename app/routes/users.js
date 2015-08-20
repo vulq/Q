@@ -15,16 +15,16 @@ var emailPass = fs.readFileSync('emailPass.txt').toString();
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: '15122queue@gmail.com',
+        user: '112queue@gmail.com',
         pass: emailPass
     }
 });
 var mailOptions = {
-    from: '15122 Queue ✔ <15122queue@gmail.com>', // sender address
-    to: 'james.jz.wu@gmail.com', // list of receivers
+    from: '112 Queue ✔ <112queue@gmail.com>', // sender address
+    to: 'jkorn@cmu.edu', // list of receivers
     subject: 'The queue is getting awfully long... ', // Subject line
-    text: 'The office hour queue has detected a 40 minute or longer wait time. If you have time, please come to help! ✔', // plaintext body
-    html: 'The office hour queue has detected a 40 minute or longer wait time. If you have time, please come to help!' // html body
+    text: 'The office hour queue has detected a 20 minute or longer wait time. If you have time, please come to help! ✔', // plaintext body
+    html: 'The office hour queue has detected a 20 minute or longer wait time. If you have time, please come to help!' // html body
 };
 
 
@@ -85,7 +85,7 @@ router.post('/adduser', function(req, res) {
 
     if (students.indexOf(andrewId) < 0) {
         res.send({
-            msg: "Your andrewID isn't associated with 15122!"
+            msg: "Your andrewID isn't associated with 15112!"
         });
         return;
     }
@@ -189,7 +189,7 @@ router.get('/gettimes', function(req, res) {
         }
 
         if(emailAlerts) {
-            threshold = 40;
+            threshold = 20;
             // if it's longer than 100
             // it's clearly not an actual help time, but perhaps something leftover.
             if (time > threshold && time < 100 && !queueFrozen) {

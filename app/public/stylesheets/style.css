@@ -1,6 +1,31 @@
 /* General container and layout styles */
-html{
+.mainpg {
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+/*html {
+    font-family: Ostrich Sans, Trebuchet, sans-serif;
     height: 100%;
+  }*/
+
+/*a {
+  font-size: 30px;
+}
+
+footer {
+  font-size: 22px;
+}
+
+h1 {
+  font-size: 80px;
+}*/
+
+
 }
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

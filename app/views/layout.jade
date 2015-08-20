@@ -2,8 +2,11 @@ doctype html
 html
   head
     title= title
+    meta(name='theme-color', content='#01579b')
     link(rel='stylesheet', href='/stylesheets/materialize.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='shortcut icon', href='/static/scs-logo.gif')
+    link(href='/font/ostrich/ostrich-sans.css', rel='stylesheet', type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
     script(src='/socket.io/socket.io.js')
@@ -12,7 +15,7 @@ html
     script(src='/javascripts/login.js')
 
   body
-    nav.green
+    nav.light-blue.darken-3
         .col.s12
             #name
             ul#nav-mobile(class="right")
@@ -40,7 +43,7 @@ html
             input#inputTAAndrewId(type='text', placeholder='Your AndrewId')
             input#inputCoursePassword(type='password',placeholder='Course Password')
         .modal-footer
-            a(type="submit" class = "waves-effect waves-light btn modal-action modal-close")#btnLogin
+            a(type="submit" class = "waves-effect waves-light btn modal-action modal-close light-blue darken-3")#btnLogin
                             i.icon-lock.icon-white
                             | Sign in
 
