@@ -8,7 +8,7 @@ var coursePass = fs.readFileSync('coursePass.txt').toString();
 var TAs = fs.readFileSync('TAAndrewIDs.txt').toString().split('\n');
 var students = fs.readFileSync('studentIDs.txt').toString().split('\n');
 
-var courseTitle = "CMUQ";
+var courseTitle = "112 Queue";
 var courseBulletin = "";
 var latestMetrics = [];
 var latestDay = null;
@@ -18,17 +18,17 @@ var latestDay = null;
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('index', {
-        title: 'CmuQ'
+        title: '112 Queue'
     });
 });
 router.get('/metrics', function(req, res) {
     if (req.session.loggedIn) {
         res.render('metrics', {
-            title: 'CmuQ'
+            title: '112 Queue'
         });
     } else {
         res.render('index', {
-            title: 'CmuQ'
+            title: '112 Queue'
         });
     }
 });
